@@ -2,7 +2,7 @@ var Submit = require('./Submit');
 
 module.exports = class Webhook {
     constructor(webhookURI){
-        this.payload = {fields:[]};
+        this.payload = {embeds:[]};
         this.webhookURI = webhookURI;
     }
     
@@ -24,14 +24,18 @@ module.exports = class Webhook {
      * @param {JSON} embed Embed to be included in the Post
      */
     addEmbed(embed){
-        this.payload.fields.push(embed);
+        this.payload.embeds.push(embed.embed);
     }
 
     /**
      * Clear all embeds from the payload
      */
     clearEmbeds(){
-        this.payload.fields = [];
+        this.payload.embeds = [];
+    }
+
+    getLength(){
+        return this.payload.embeds.length;
     }
 
     /**
