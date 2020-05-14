@@ -1,0 +1,28 @@
+{
+  "name": "discord-webhook-multi",
+  "version": "1.0.0",
+  "description": "Post up to 10 Webhooks in a single webhook",
+  "main": "index.js",
+  "dependencies": {
+    "color": "^3.1.2",
+    "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/codyamies/discord-webhook-multi.git"
+  },
+  "keywords": [
+    "discord",
+    "webhook"
+  ],
+  "author": "Cody Amies",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/codyamies/discord-webhook-multi/issues"
+  },
+  "homepage": "https://github.com/codyamies/discord-webhook-multi#readme"
+}
