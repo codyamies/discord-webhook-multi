@@ -3,10 +3,10 @@ module.exports = class MessageBuilder {
     constructor(){
         this.embed = {fields:[]};
     }
-    setAuthor(author, imageURL, URL){
+    setAuthor(author, imageURL, url){
         this.embed.author = {};
-        this.embed.author.name = name;
-        this.embed.author.url = URL;
+        this.embed.author.name = author;
+        this.embed.author.url = url;
         this.embed.author.icon_url = imageURL;
         return this;
     }
@@ -18,9 +18,9 @@ module.exports = class MessageBuilder {
         this.embed.url = url;
         return this;
     }
-    setThumbnail(image){
+    setThumbnail(imageURL){
         this.embed.image = {};
-        this.embed.image.url = image;
+        this.embed.image.url = imageURL;
         return this;
     }
     setTimestamp(){
@@ -35,9 +35,9 @@ module.exports = class MessageBuilder {
         this.embed.description = description;
         return this;
     }
-    setFooter(footer, image){
+    setFooter(text, image){
         this.embed.footer = {};
-        this.embed.footer.text = footer;
+        this.embed.footer.text = text;
         this.embed.footer.icon_url = image;
         return this;
     }
@@ -46,7 +46,7 @@ module.exports = class MessageBuilder {
             name: name,
             value: value.toString(),
             inline: inline
-        })
+        });
         return this;
     }
 }

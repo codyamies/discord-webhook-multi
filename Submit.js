@@ -10,8 +10,8 @@ module.exports = (hookURI, payload) => new Promise((resolve, reject)=>{
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/65.0.3325.181 Safari/537.36',
             'Cache-Control': 'max-age=0',
             'Connection': 'keep-alive'
-        }
-        body: JSON.stringify(payload);
+        },
+        body: JSON.stringify(payload)
     })
     .then(result => resolve(result) )
     .catch(err => reject(err) );
