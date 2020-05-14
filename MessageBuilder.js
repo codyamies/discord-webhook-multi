@@ -44,7 +44,7 @@ module.exports = class MessageBuilder {
     addField(name, value, inline){
         this.embed.fields.push({
             name: name,
-            value: value,
+            value: value.toString(),
             inline: inline
         })
         return this;
