@@ -14,13 +14,14 @@ npm install discord-webhook-mutli
 const { Webhook, MessageBuilder } = require('discord-webhook-mutli');
 
 var hook = new Webhook('Webhook URI Here');
-for(var i = 0; i <= 10; ++i){ // Loop 10 times
+for(var i = 0; i < 10; ++i){ // Loop 10 times
    var embed = new MessageBuilder(); // Make a new Embed
    embed.setTitle(`Embeds: ${i}`) // Set the Title
    .addField('Multiply', 10*i, true) // add a new inline field
    .addField('Divide', 10/i, true) // add a new inline field
    .addField('Bananas', `I Have ${2*i} Bananas`) // add a new field
-   .setColour('#42f5ce'); // Supports Hex Colours
+   .setColour('#42f5ce') // Supports Hex Colours
+   .setTimestamp();
    hook.addEmbed(embed); // Add the embed to the webhook
 }
 hook.Post(); // Post them all
