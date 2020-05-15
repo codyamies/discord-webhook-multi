@@ -40,6 +40,9 @@ Add a new embed to the webhook
 * **Webhook.clearEmbeds()**  
 remove all the embeds currently in the webhook
 
+* **Webhook.getLength()**  
+Get the current amount of embeds in the webhook
+
 * **Webhook.Post()**  
 Post the Webhook to Discord
 
