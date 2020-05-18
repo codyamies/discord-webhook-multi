@@ -18,9 +18,14 @@ module.exports = class MessageBuilder {
         this.embed.url = url;
         return this;
     }
-    setThumbnail(imageURL){
+    setImage(imageURL){
         this.embed.image = {};
         this.embed.image.url = imageURL;
+        return this;
+    }
+    setThumbnail(imageURL){
+        this.embed.thumbnail = {};
+        this.embed.thumbnail.url = imageURL;
         return this;
     }
     setTimestamp(){

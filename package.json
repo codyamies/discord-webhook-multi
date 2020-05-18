@@ -1,6 +1,6 @@
 {
   "name": "discord-webhook-multi",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Post up to 10 embeds in a single webhook",
   "main": "index.js",
   "dependencies": {
